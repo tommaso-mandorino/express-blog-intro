@@ -1,6 +1,9 @@
 // Define server port
 const PORT = 5000;
 
+// Posts objects array importing
+import posts from './data.js';
+
 // Express importing
 import express from 'express';
 
