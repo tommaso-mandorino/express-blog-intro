@@ -17,6 +17,14 @@ server.get('/', (request, response) => {
 
 });
 
+// Capture /api/posts route
+server.get('/api/posts', (request, response) => {
+
+    // Send posts objects array
+    response.send(posts);
+
+});
+
 // Start server listening
 server.listen(PORT, () => {
 
