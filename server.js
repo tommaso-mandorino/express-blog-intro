@@ -1,5 +1,5 @@
-// Define server port
-const PORT = 5000;
+// Import server port
+import PORT from "./server-config.js";
 
 // Posts objects array importing
 import posts from './data.js';
@@ -9,6 +9,9 @@ import express from 'express';
 
 // Initialize a new server
 const server = express();
+
+// Expose static assets public folder
+server.use(express.static('public'));
 
 // Capture root route
 server.get('/', (request, response) => {
